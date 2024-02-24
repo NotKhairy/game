@@ -1,79 +1,84 @@
 package game.engine.titans;
 import game.engine.interfaces.*;
 
-public final class Titan implements Comparable, Attackee, Attacker, Mobil{
+public abstract class Titan implements Comparable<Titan>, Attacker, Attackee, Mobil {
 	private int baseHealth;
-	public int getBaseHealth() {
-		return baseHealth;
-	}
-	private int currentHealth = baseHealth;
+	private int currentHealth;
 	private int baseDamage;
-	public int getBaseDamage() {
-		return baseDamage;
-	}
 	private int heightInMeters;
 	private int distanceFromBase;
 	private int speed;
 	private int resourcesValue;
 	private int dangerLevel;
 	
+	public int getBaseHealth() {
+		return baseHealth;
+	}
 	
+	public int getHeightInMeters() {
+		return heightInMeters;
+	}
 	
-	private Titan() {}
-	
+	public int getDangerLevel() {
+		return dangerLevel;
+	}
 	
 	@Override
 	public int getDistance() {
-		// TODO Auto-generated method stub
-		return 0;
+		return distanceFromBase;
 	}
-
+	@Override
+	public int getCurrentHealth() {
+		return currentHealth;
+	}
+	@Override
+	public void setCurrentHealth(int health) {
+		currentHealth = health;
+	}	
 	@Override
 	public void setDistance(int distance) {
-		// TODO Auto-generated method stub
-		
+		distanceFromBase = distance;
 	}
-
+	@Override
+	public int getDamage() {
+		return baseDamage;
+	}
 	@Override
 	public int getSpeed() {
-		// TODO Auto-generated method stub
-		return 0;
+		return speed;
 	}
 
 	@Override
 	public void setSpeed(int speed) {
-		// TODO Auto-generated method stub
-		
+		this.speed = speed;
 	}
 
-	@Override
-	public int getDamage() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int getCurrentHealth() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public void setCurrentHealth(int health) {
-		// TODO Auto-generated method stub
-		
-	}
 
 	@Override
 	public int getResourcesValue() {
-		// TODO Auto-generated method stub
-		return 0;
+		return resourcesValue;
 	}
 
+
 	@Override
-	public int compareTo(Object o) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int compareTo(Titan o) {
+		if(this.distanceFromBase < o.distanceFromBase ) return -1;
+		else if(this.distanceFromBase == o.distanceFromBase ) return 0;
+		else return 1;
 	}
+	
+	
+	public Titan(int baseHealth, int baseDamage, int heightInMeters, 
+			int distanceFromBase, int speed, int resourcesValue, int dangerLevel) {
+		this.baseHealth = baseHealth;
+		this.currentHealth = baseHealth;
+		this.baseDamage = baseDamage;
+		this.heightInMeters = heightInMeters;
+		this.distanceFromBase = distanceFromBase;
+		this.speed = speed;
+		this.resourcesValue = resourcesValue;
+		this.dangerLevel = dangerLevel;
+	}
+	
 	
 }
