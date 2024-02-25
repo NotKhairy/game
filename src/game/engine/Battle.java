@@ -36,7 +36,7 @@ int initialResourcesPerLane) throws IOException{
 	
 }
 private void initializeLanes(int numOfLanes) {
-	//note
+	
 }
 
 }
