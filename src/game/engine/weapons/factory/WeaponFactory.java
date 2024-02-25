@@ -1,11 +1,16 @@
 package game.engine.weapons.factory;
 
-public class WeaponFactory {
-	private HashMap<Integer, WeaponRegistry> weaponShop;
+import java.io.IOException;
+import java.util.HashMap;
 
-	
-	
-	WeaponFactory() throws IOException:
-		this.weaponShop= weaponShop;
-	
+import game.engine.weapons.WeaponRegistry;
+
+public class WeaponFactory {
+	HashMap<Integer, WeaponRegistry> weaponShop;
+	public WeaponFactory() throws IOException{
+		
+		
+	}
+	 
+
 }
