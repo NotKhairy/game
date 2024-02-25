@@ -4,9 +4,7 @@ public abstract class Weapon implements Attacker { //Implements 3lshan hwa 2al "
 	int baseDamage;
 	
 	public Weapon(int baseDamage) {
-		
 		this.baseDamage = baseDamage;
-		
 	}
 
 	@Override

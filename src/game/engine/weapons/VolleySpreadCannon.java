@@ -2,8 +2,8 @@ package game.engine.weapons;
 
 public class VolleySpreadCannon extends Weapon{
 	private static final int WEAPON_CODE = 3;
-	int minRange;
-	int maxRange;
+	private int minRange;
+	private int maxRange;
 	public VolleySpreadCannon(int baseDamage, int minRange, int maxRange) {
 		super(baseDamage);
 		this.minRange = minRange;

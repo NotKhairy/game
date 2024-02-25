@@ -7,10 +7,10 @@ import game.engine.titans.Titan;
 import game.engine.weapons.Weapon;
 
 public class Lane implements Comparable<Lane>{
-	private final Wall laneWall;
+	private Wall laneWall;
 	private int dangerLevel;
-	private final PriorityQueue<Titan> titans;
-	private final ArrayList<Weapon> weapons;
+	private PriorityQueue<Titan> titans;
+	private ArrayList<Weapon> weapons;
 	
 	public Lane(Wall laneWall) {
 		this.laneWall = laneWall;
