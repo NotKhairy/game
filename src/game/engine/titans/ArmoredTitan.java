@@ -4,8 +4,7 @@ public class ArmoredTitan extends Titan{
 	
 	public ArmoredTitan(int baseHealth, int baseDamage, int heightInMeters, int distanceFromBase, 
 			int speed, int resourcesValue, int dangerLevel) {
-		super(baseHealth,baseDamage,heightInMeters,distanceFromBase,speed,resourcesValue,dangerLevel);
-		this.TITAN_CODE = 3;
+		super(baseHealth,baseDamage,heightInMeters,distanceFromBase,speed,resourcesValue,dangerLevel,3);
 	}
 	
 }

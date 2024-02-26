@@ -10,7 +10,7 @@ public abstract class Titan implements Comparable<Titan>, Attacker, Attackee, Mo
 	private int speed;
 	private int resourcesValue;
 	private int dangerLevel;
-	int TITAN_CODE;
+	private final int TITAN_CODE;
 	
 	public int getBaseHealth() {
 		return baseHealth;
@@ -70,7 +70,7 @@ public abstract class Titan implements Comparable<Titan>, Attacker, Attackee, Mo
 	
 	
 	public Titan(int baseHealth, int baseDamage, int heightInMeters, 
-			int distanceFromBase, int speed, int resourcesValue, int dangerLevel) {
+			int distanceFromBase, int speed, int resourcesValue, int dangerLevel, int TITAN_CODE) {
 		this.baseHealth = baseHealth;
 		this.currentHealth = baseHealth;
 		this.baseDamage = baseDamage;
@@ -79,6 +79,7 @@ public abstract class Titan implements Comparable<Titan>, Attacker, Attackee, Mo
 		this.speed = speed;
 		this.resourcesValue = resourcesValue;
 		this.dangerLevel = dangerLevel;
+		this.TITAN_CODE = TITAN_CODE;
 	}
 	
 	public int getTitanCode() {
