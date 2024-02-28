@@ -1,7 +1,7 @@
 package game.engine.titans;
 
 public class TitanRegistry {
-	private int code;
+	private final int code;
 	private int baseHealth;
 	private int baseDamage;
 	private int heightInMeters;
