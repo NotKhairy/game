@@ -9,8 +9,8 @@ import game.engine.titans.TitanRegistry;
 import game.engine.weapons.WeaponRegistry;
 
 public class DataLoader {
-  private String  TITANS_FILE_NAME;
-  private String  WEAPONS_FILE_NAME;
+  private final String  TITANS_FILE_NAME;
+  private final String  WEAPONS_FILE_NAME;
   
   
   
