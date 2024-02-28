@@ -24,6 +24,8 @@ private HashMap<Integer, TitanRegistry> titansArchives;
 private ArrayList<Titan> approachingTitans;
 private PriorityQueue<Lane> lanes;
 private  ArrayList<Lane> originalLanes;
+private int initialNumOfLanes;
+private int initialResourcesPerLane;
 
 Battle(int numberOfTurns, int score, int titanSpawnDistance, int initialNumOfLanes,
 int initialResourcesPerLane) throws IOException{
