@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.PriorityQueue;
 
+import game.engine.base.Wall;
 import game.engine.lanes.Lane;
 import game.engine.titans.Titan;
 import game.engine.titans.TitanRegistry;
@@ -38,7 +39,11 @@ int initialResourcesPerLane) throws IOException{
 	
 }
 private void initializeLanes(int numOfLanes) {
-	
+	 for (int i = 0; i < numOfLanes; i++) {
+         Lane lane = new Lane(new Wall(WALL_BASE_HEALTH));
+         originalLanes.add(lane);
+         lanes.add(lane);
+     }
 }
 
 }
