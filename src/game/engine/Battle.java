@@ -43,6 +43,15 @@ int initialResourcesPerLane) throws IOException{
 	
 	
 }
+public int getNumberOfTitansPerTurn() {
+	return numberOfTitansPerTurn;
+}
+public void setNumberOfTitansPerTurn(int numberOfTitansPerTurn) {
+	this.numberOfTitansPerTurn = numberOfTitansPerTurn;
+}
+public PriorityQueue<Lane> getLanes() {
+	return lanes;
+}
 public ArrayList<Titan> getApproachingTitans() {
 	return approachingTitans;
 }

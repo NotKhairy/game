@@ -5,7 +5,7 @@ import game.engine.weapons.WeaponRegistry;
 
 public class WeaponFactory {
 	
-	HashMap<Integer, WeaponRegistry> weaponShop;
+	private HashMap<Integer, WeaponRegistry> weaponShop;
 	public WeaponFactory() throws IOException{
 	}
 	
