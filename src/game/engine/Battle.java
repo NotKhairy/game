@@ -28,7 +28,7 @@ final private  ArrayList<Lane> originalLanes;
 private int initialNumOfLanes;
 private int initialResourcesPerLane;
 
-Battle(int numberOfTurns, int score, int titanSpawnDistance, int initialNumOfLanes,
+public Battle(int numberOfTurns, int score, int titanSpawnDistance, int initialNumOfLanes,
 int initialResourcesPerLane) throws IOException{
 	this.numberOfTurns = numberOfTurns;
 	this.score=score;

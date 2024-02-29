@@ -10,7 +10,7 @@ public class InsufficientResourcesException extends GameActionException {
 		setResourcesProvided(resourcesProvided);
 		
 	}
-	InsufficientResourcesException(String message, int resourcesProvided){
+	public InsufficientResourcesException(String message, int resourcesProvided){
 		super(message);
 		setResourcesProvided(resourcesProvided);
 	}
