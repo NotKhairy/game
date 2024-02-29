@@ -7,6 +7,7 @@ public class WeaponFactory {
 	
 	private HashMap<Integer, WeaponRegistry> weaponShop;
 	public WeaponFactory() throws IOException{
+		this.weaponShop = weaponShop;
 	}
 	
 }
