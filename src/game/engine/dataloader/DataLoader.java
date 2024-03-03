@@ -47,16 +47,21 @@ public class DataLoader{
 			String s;
 			while((s = br.readLine())!=null) {
 				String [] parts = s.split(",");
+				int ln = parts.length;
 				int code = Integer.parseInt(parts[0].trim());
 				int price = Integer.parseInt(parts[1].trim());
 				int damage = Integer.parseInt(parts[2].trim());
 				String name = parts[3].trim();
-				int minRange = Integer.parseInt(parts[4].trim());
-				int maxRange = Integer.parseInt(parts[5].trim());
-				
-				WeaponRegistry weapon = new WeaponRegistry(code, price, damage, name, minRange, maxRange);
-				
-				Map.put(code, weapon);
+				if(ln>4) {
+					int minRange = Integer.parseInt(parts[4].trim());
+					int maxRange = Integer.parseInt(parts[5].trim());
+					WeaponRegistry weapon = new WeaponRegistry(code, price, damage, name, minRange, maxRange);
+					Map.put(code, weapon);
+				} else {
+					WeaponRegistry weapon = new WeaponRegistry(code, price, damage, name);
+					Map.put(code, weapon);
+
+				}
 
 
 			}
