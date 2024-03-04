@@ -7,8 +7,7 @@ public class InvalidCSVFormat extends IOException {
 	
 	
 	public InvalidCSVFormat(String inputLine) {
-		super(MSG);
-		getInputLine();
+		super(MSG + inputLine);
 		setInputLine(inputLine);
 	}
 	

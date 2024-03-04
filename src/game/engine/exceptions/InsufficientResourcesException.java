@@ -1,12 +1,11 @@
 package game.engine.exceptions;
 
 public class InsufficientResourcesException extends GameActionException {
-	private static final String MSG = "Not enough resources, resources provided =";
+	private static final String MSG = "Not enough resources, resources provided = ";
 	private int resourcesProvided;
 	
 	public InsufficientResourcesException(int resourcesProvided) {
-		super(MSG);
-		getResourcesProvided();
+		super(MSG + resourcesProvided);
 		setResourcesProvided(resourcesProvided);
 		
 	}

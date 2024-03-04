@@ -3,7 +3,7 @@ package game.engine.base;
 import game.engine.interfaces.Attackee;
 
 public class Wall implements Attackee{
-	private int baseHealth;
+	private final int baseHealth;
 	private int currentHealth;
 	public Wall(int baseHealth) {
 		this.baseHealth = baseHealth;
