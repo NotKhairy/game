@@ -13,7 +13,12 @@ import game.engine.titans.TitanRegistry;
 import game.engine.weapons.factory.WeaponFactory;
 
 public class Battle {
-final private int [][] PHASES_APPROACHING_TITANS;
+final private static int [][] PHASES_APPROACHING_TITANS = {
+		{1,2,3,4},
+		{1,2,3,4},
+		{1,2,3,4},
+};
+
 final private int WALL_BASE_HEALTH = 1000;
 private int numberOfTurns;
 private int resourcesGathered;
@@ -33,7 +38,6 @@ int initialResourcesPerLane) throws IOException{
 	this.score=score;
 	this.titanSpawnDistance=titanSpawnDistance;
 	this.resourcesGathered=initialResourcesPerLane*initialNumOfLanes;
-	this.PHASES_APPROACHING_TITANS = null;
 	this.weaponFactory = new WeaponFactory();
 	this.lanes = new PriorityQueue<Lane>();
 	this.originalLanes = new ArrayList<Lane>();
@@ -60,7 +64,7 @@ public ArrayList<Lane> getOriginalLanes(){
 public WeaponFactory getWeaponFactory() {
 	return weaponFactory;
 }
-public HashMap<Integer, TitanRegistry> geTitansArchives(){
+public HashMap<Integer, TitanRegistry> getTitansArchives(){
 	return titansArchives;
 }
 public int getNumberOfTitansPerTurn() {
