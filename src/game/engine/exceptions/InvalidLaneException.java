@@ -6,7 +6,7 @@ public class InvalidLaneException extends GameActionException {
 	 public  InvalidLaneException() {
 		 super(MSG);
 	 }
-	 InvalidLaneException(String message){
+	 public InvalidLaneException(String message){
 		 super(message);
 	 }
 
