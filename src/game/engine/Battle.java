@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.PriorityQueue;
 
 import game.engine.base.Wall;
+import game.engine.dataloader.DataLoader;
 import game.engine.lanes.Lane;
 import game.engine.titans.Titan;
 import game.engine.titans.TitanRegistry;
@@ -21,27 +22,46 @@ private int numberOfTitansPerTurn = 1;
 private int score;
 private int titanSpawnDistance;
 final private WeaponFactory weaponFactory;
-private HashMap<Integer, TitanRegistry> titansArchives;
+final private HashMap<Integer, TitanRegistry> titansArchives = DataLoader.readTitanRegistry();
 final private ArrayList<Titan> approachingTitans;
 final private PriorityQueue<Lane> lanes;
 final private  ArrayList<Lane> originalLanes;
-private int initialNumOfLanes;
-private int initialResourcesPerLane;
 
 public Battle(int numberOfTurns, int score, int titanSpawnDistance, int initialNumOfLanes,
 int initialResourcesPerLane) throws IOException{
 	this.numberOfTurns = numberOfTurns;
 	this.score=score;
 	this.titanSpawnDistance=titanSpawnDistance;
-	this.initialNumOfLanes=initialNumOfLanes;
-	this.initialResourcesPerLane=initialResourcesPerLane;
+	this.resourcesGathered=initialResourcesPerLane*initialNumOfLanes;
 	this.PHASES_APPROACHING_TITANS = null;
 	this.weaponFactory = new WeaponFactory();
-	this.lanes = new PriorityQueue<>();
-	this.originalLanes = new ArrayList<>();
+	this.lanes = new PriorityQueue<Lane>();
+	this.originalLanes = new ArrayList<Lane>();
 	this.approachingTitans = new ArrayList<>();
 	
 	
+}
+
+public int[][] getPhasesApproachingTitans(){
+	return PHASES_APPROACHING_TITANS;
+}
+public int getWallBaseHealth() {
+	return WALL_BASE_HEALTH;
+}
+public BattlePhase getBattlePhase() {
+	return battlePhase;
+}
+public void setBattlePhase(BattlePhase battlePhase) {
+	this.battlePhase = battlePhase;
+}
+public ArrayList<Lane> getOriginalLanes(){
+	return originalLanes;
+}
+public WeaponFactory getWeaponFactory() {
+	return weaponFactory;
+}
+public HashMap<Integer, TitanRegistry> geTitansArchives(){
+	return titansArchives;
 }
 public int getNumberOfTitansPerTurn() {
 	return numberOfTitansPerTurn;
