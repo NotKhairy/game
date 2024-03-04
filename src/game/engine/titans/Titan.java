@@ -33,7 +33,9 @@ public abstract class Titan implements Comparable<Titan>, Attacker, Attackee, Mo
 	}
 	@Override
 	public void setCurrentHealth(int health) {
-		currentHealth = health;
+		
+		if(health > 0) currentHealth = health;
+		else currentHealth = 0;
 	}	
 	@Override
 	public void setDistance(int distance) {

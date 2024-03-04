@@ -14,9 +14,9 @@ import game.engine.weapons.factory.WeaponFactory;
 
 public class Battle {
 final private static int [][] PHASES_APPROACHING_TITANS = {
-		{1,2,3,4},
-		{1,2,3,4},
-		{1,2,3,4},
+		{ 1, 1, 1, 2, 1, 3, 4 },
+		{ 2, 2, 2, 1, 3, 3, 4 },
+		{ 4, 4, 4, 4, 4, 4, 4 } 
 };
 
 final private int WALL_BASE_HEALTH = 1000;
@@ -41,6 +41,7 @@ int initialResourcesPerLane) throws IOException{
 	this.weaponFactory = new WeaponFactory();
 	this.lanes = new PriorityQueue<Lane>();
 	this.originalLanes = new ArrayList<Lane>();
+	initializeLanes(initialNumOfLanes);
 	this.approachingTitans = new ArrayList<>();
 	
 	
