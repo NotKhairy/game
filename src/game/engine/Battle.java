@@ -19,7 +19,7 @@ final private static int [][] PHASES_APPROACHING_TITANS = {
 		{ 4, 4, 4, 4, 4, 4, 4 } 
 };
 
-final private int WALL_BASE_HEALTH = 1000;
+final private int WALL_BASE_HEALTH = 10000;
 private int numberOfTurns;
 private int resourcesGathered;
 private BattlePhase battlePhase;
