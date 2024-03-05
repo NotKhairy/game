@@ -22,7 +22,7 @@ final private static int [][] PHASES_APPROACHING_TITANS = {
 final private int WALL_BASE_HEALTH = 10000;
 private int numberOfTurns;
 private int resourcesGathered;
-private BattlePhase battlePhase;
+private BattlePhase battlePhase = BattlePhase.EARLY;
 private int numberOfTitansPerTurn = 1;
 private int score;
 private int titanSpawnDistance;
