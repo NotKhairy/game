@@ -14,7 +14,9 @@ public class Wall implements Attackee{
 		return currentHealth;
 	}
 	public void setCurrentHealth(int currentHealth) {
-		if (currentHealth < 0) this.currentHealth = 0;
+		if (currentHealth < 0) {
+			this.currentHealth = 0;
+		}
 		else this.currentHealth = currentHealth;
 	}
 	public int getBaseHealth() {

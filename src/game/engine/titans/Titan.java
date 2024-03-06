@@ -64,9 +64,7 @@ public abstract class Titan implements Comparable<Titan>, Attacker, Attackee, Mo
 
 	@Override
 	public int compareTo(Titan o) {
-		if(this.distanceFromBase < o.distanceFromBase ) return -1;
-		else if(this.distanceFromBase == o.distanceFromBase ) return 0;
-		else return 1;
+		return this.distanceFromBase - o.distanceFromBase;
 	}
 	
 	
@@ -80,7 +78,6 @@ public abstract class Titan implements Comparable<Titan>, Attacker, Attackee, Mo
 		this.speed = speed;
 		this.resourcesValue = resourcesValue;
 		this.dangerLevel = dangerLevel;
-		setCurrentHealth(baseHealth);
 	}
 	
 	

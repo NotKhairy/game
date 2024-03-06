@@ -16,8 +16,8 @@ public class Lane implements Comparable<Lane>{
 	public Lane(Wall laneWall) {
 		this.laneWall = laneWall;
 		this.dangerLevel = 0;
-		this.titans = new PriorityQueue<>((titan1, titain2) -> titain2.getDistance() - titan1.getDistance());
-		this.weapons = new ArrayList<>();
+		this.titans = new PriorityQueue<Titan>();
+		this.weapons = new ArrayList<Weapon>();
 		
 	}
 
@@ -41,7 +41,7 @@ public class Lane implements Comparable<Lane>{
 		return weapons;
 	}
 	public int compareTo(Lane o) {
-		 return Integer.compare(this.dangerLevel, o.dangerLevel);
+		 return this.dangerLevel - o.dangerLevel;
 		
 	}
 	
